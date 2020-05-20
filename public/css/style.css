@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    background-color: #272c2c;
+}
+
+header img {
+    margin: 30px auto 30px auto;
+    width: 300px;
+    filter: invert();
+}
+
+header h1 {
+    color: white;
+    margin: auto auto 30px auto;
+}
+
+header nav {
+    background-color: black;
+    min-height: 50px;
+    justify-content: center;
+    display: flex;
+}
+
+header nav button {
+    min-height: 50px;
+    width: 150px;
+
+    border-right: gray 2px solid;
+    border-left: gray 2px solid;
+    border-bottom: none;
+    border-top: none;
+
+    background-color: transparent;
+    color: white;
+}
+
+header nav button:first-child {
+    border-left: none;
+}
+
+header nav button:last-child {
+    border-right: none;
+}
