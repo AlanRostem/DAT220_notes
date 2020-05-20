@@ -1,6 +1,10 @@
 Basics~
 # Basics
- 
+
+Learn the basic concepts here. 
+
+## Keywords
+  
 **Data Model**: A collection of concepts describing data. It is an abstract model that organizes
 elements of data and standardizes how they relate to one another and to the properties of real-world entities.
 
