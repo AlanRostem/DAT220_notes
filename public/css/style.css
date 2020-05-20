@@ -34,7 +34,7 @@ header nav {
 
 header nav button {
     min-height: 50px;
-    width: 150px;
+    min-width: 150px;
 
     border-right: gray 2px solid;
     border-left: gray 2px solid;
@@ -51,4 +51,8 @@ header nav button:first-child {
 
 header nav button:last-child {
     border-right: none;
+}
+
+main {
+    width: 90%;
 }
