@@ -1,6 +1,6 @@
-Relational Algebra Cheat Sheet~
+Relational Algebra~
 
-# Relational Algebra Cheat Sheet
+# Relational Algebra
 
 ### Basic Operations
 
@@ -11,6 +11,8 @@ Relational Algebra Cheat Sheet~
 - Union (∪) Tuples in reln.1 and in reln. 2.
 - Intersection (∩) 
 - Division (/)
+- Natural Join (⋈)
+- Rename (ρ)
 
 ### Projection
 
@@ -28,12 +30,6 @@ Example usage: π<sub>sname, rating</sub>(σ<sub>rating > 8</sub>(S2))
 
 ### Union
 
-A∪B where A and B are tables which satisfy the conditions: 
-
-- A and B must have the same number of columns/attributes
-- Attribute domains must be compatible
-- Duplicate tuples are automatically deleted 
-
 Example usage:
  
 π<sub>author</sub>(Books) ∪ π<sub>author</sub>(Articles)
@@ -42,3 +38,46 @@ Projects the names of the authors who have either written a book or an article o
 
 ### Intersection
 
+A ∩ B
+ 
+Returns the duplicate rows that appear in both A and B
+
+### Set-Difference 
+
+A - B 
+
+Returns the tuples present in A and in both A and B but discards the ones in B not present in A. 
+
+### Cross-product
+
+A × B 
+
+Returns all the attributes of A followed by each attribute of B. Each record of A pairs with every
+record of B. 
+
+### Renaming
+
+ρ<sub>a</sub>(A)
+
+Rename is a unary operation used for renaming attributes of a relation.
+
+### Condition join
+
+R⋈<sub>c</sub>S = σ<sub>c</sub>(R × S)
+
+### Equi-Join
+
+A special case of condition join where the condition *c* contains only equalities
+
+S1 ⋈ <sub>sid</sub>R1
+
+### Natural join
+
+Natural join is a binary operator. Natural join between two or more relations will
+result set of all combination of tuples where they have equal common attribute.
+
+### Division
+
+A / B 
+
+Any columns from B present in A will return tuples next to it.  
