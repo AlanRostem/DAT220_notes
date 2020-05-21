@@ -45,3 +45,30 @@ DELETE FROM Students
 WHERE name = "Smith";
 ```
 
+### Referential Integrity
+
+```sql
+CREATE TABLE Enrolled
+    (sid CHAR(20),
+    cid CHAR(20),
+    grade CHAR(2),
+    PRIMARY KEY (sid,cid),
+    FOREIGN KEY (sid)
+    REFERENCES Students
+        ON DELETE CASCADE
+        ON UPDATE SET DEFAULT) -- What occurs when the tuple is altered or deleted
+```
+
+### Weak Entities
+
+```sql
+CREATE TABLE Dep_Policy (
+    pname CHAR(20),
+    age INTEGER,
+    cost REAL,
+    ssn CHAR(11) NOT NULL,
+    PRIMARY KEY (pname, ssn),
+    FOREIGN KEY (ssn) REFERENCES Employees,
+        ON DELETE CASCADE) /*This entity is also a relationship to Employees and gets deleted when
+                             a tuple from Employees is deleted*/
+```
