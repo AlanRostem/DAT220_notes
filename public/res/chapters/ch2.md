@@ -48,6 +48,14 @@ A weak entity set and the corresponding relationship are both translated into a 
 both are combined. Both the data about the weak entity and foreign keys that link it to the
 corresponding table is set into one table. 
 
+## ISA Hierarchies
 
+An ISA (or is-a) hierarchy involves creating an entity set with base attributes that other different
+entities inherit those attributes along with having additional ones based on their different
+application (kind of like inheritance in Java). This is accomplished by having other weak entities 
+containing the additional attributes or by a relationship table. 
 
+## Views and Security
 
+Views can be used to present necessary information (or a summary) while hiding details in underlying 
+relations.  

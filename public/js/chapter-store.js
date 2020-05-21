@@ -27,6 +27,7 @@ export default class ChapterStore {
                 });
                 navbar.appendChild(btn);
             } catch (e) {
+                console.error(e);
                 break;
             }
         }
