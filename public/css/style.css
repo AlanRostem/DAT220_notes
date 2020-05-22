@@ -30,29 +30,23 @@ header nav {
     min-height: 50px;
     justify-content: center;
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 header nav button {
     min-height: 50px;
     min-width: 150px;
 
-    border-right: gray 2px solid;
-    border-left: gray 2px solid;
-    border-bottom: none;
-    border-top: none;
+    border: gray 2px solid;
+    margin: 4px;
 
     background-color: transparent;
     color: white;
     outline: none;
 }
 
-header nav button:first-child {
-    border-left: none;
-}
-
-header nav button:last-child {
-    border-right: none;
-}
 
 main {
     width: 70%;
