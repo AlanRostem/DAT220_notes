@@ -35,7 +35,9 @@ It also uses quantifiers:
 In domain relational calculus, filtering is done based on the domain of the attributes and not
 based on the tuple values.
 
-    Syntax: { c1, c2, c3, ..., cn | F(c1, c2, c3, ... ,cn)}
+Syntax:
+ 
+    { c1, c2, c3, ..., cn | F(c1, c2, c3, ... ,cn)}
 
 where, c1, c2... etc represents domain of attributes(columns) and F defines the formula including 
 the condition for fetching the data.
