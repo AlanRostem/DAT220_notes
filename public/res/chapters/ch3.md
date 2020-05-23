@@ -2,10 +2,6 @@ SQL Cheat sheet~
 
 # SQL Cheat sheet
 
-```sql
-
-```
-
 ### Table creation
 
 ```sql

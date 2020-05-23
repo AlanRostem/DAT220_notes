@@ -1,6 +1,6 @@
-DBMS Normalization~
+Schema Refinement~
 
-# DBMS Normalization
+# Schema Refinement
 
 ## Functional Dependencies
 
@@ -24,6 +24,53 @@ A → B,    A → C,    A → D,    A → E
 - __Union__: If X → Y and X → Z, then X → YZ
 - __Decomposition__: If X → YZ, then X → Y and X → Z
 
+### Armstrong’s Axioms
+
+#### Reflexivity
+
+Show: 
+    
+    if Y ⊆ X, then X → Y
+
+Given 
+
+    X = {S,N}, Y = {N}
+
+Solution:
+
+    Y ⊆ X: {N} ⊆ {S,N}
+    
+#### Augmentation
+
+Show: 
+
+    if X → Y, then XZ → YZ
+
+Given 
+
+    X = {S}, Y = {N}, Z = {L}
+
+Solution:
+
+    X → Y: {S} → {Ν}
+    ⟹ XZ → YZ: {S,L} → {N,L}
+
+#### Transitivity
+
+Show: 
+
+    if X → Y and Y → Z, then X → Z
+
+Given 
+
+    X = {S}, Y = {R}, Z = {W}
+
+Solution:
+    
+    X → Y : {S} → {R}
+    Y → Z : {R} → {W}
+    ⟹ X → Z : {S} → {W}
+
 ## Decomposition
 
 - Decomposition is the process of breaking down in parts or elements.
@@ -37,3 +84,17 @@ the original relation can be accurately reconstructed based on the decomposed re
 
 - If there is no proper decomposition of the relation, then it may lead to problems like 
 loss of information.
+
+## Lossless-Join Decomposition
+
+A lossless-join decomposition is a decomposition of a relation into relations, such 
+that a natural join of the two smaller relations yields back the original relation.
+
+π<sub>X</sub>(r) ⋈ π <sub>Y</sub> (r) = r 
+
+## Dependency-Preserving Decomposition
+
+If we decompose a relation R into relations R1 and R2, All dependencies of R
+either must be a part of R1 or R2 or must be derivable from combination of 
+FD’s of R1 and R2.
+
