@@ -94,7 +94,14 @@ that a natural join of the two smaller relations yields back the original relati
 
 ## Dependency-Preserving Decomposition
 
-If we decompose a relation R into relations R1 and R2, All dependencies of R
-either must be a part of R1 or R2 or must be derivable from combination of 
-FD’s of R1 and R2.
+R = {A,B,C,D,E} decomposed into R1 ={A,B,C} , R2 ={B,C,D} and R3 ={A,C,E}.
 
+"_determine if the dependencies are preserved by the decomposition._"
+
+Yes they are as BC->D is preserved in R2 and AC->E is preserved in R3 as is very apparent!
+Note - Although a decomposition may be dependency-preserving it is not necessary that it is 
+in a higher normal form.
+
+## Finding Minimal Cover
+
+...
