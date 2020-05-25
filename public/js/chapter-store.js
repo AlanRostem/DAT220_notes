@@ -6,7 +6,7 @@ export default class ChapterStore {
         this.storeChaptersFromFolder(chapterCount);
     }
 
-    storeChaptersFromFolder(total) {
+    storeChaptersFromFolder() {
         for (let i = 1; ; i++) {
             try {
                 let str = this.loadMarkdownStr(this.getChapterFilePath(i));
@@ -27,7 +27,6 @@ export default class ChapterStore {
                 });
                 navbar.appendChild(btn);
             } catch (e) {
-                console.error(e);
                 break;
             }
         }
