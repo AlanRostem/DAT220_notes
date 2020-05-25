@@ -104,4 +104,6 @@ in a higher normal form.
 
 ## Finding Minimal Cover
 
-...
+1. Put the FDs in a standard form: Single attribute on the right side
+2. Minimize the left side of each FD: Check each attribute in the left side to see it deleting it will still preserve F<sup>+</sup>=G<sup>+</sup>
+3. Delete redundant FDs: Check each FD to see whether it can be deleted and still preserve F<sup>+</sup>=G<sup>+</sup>
